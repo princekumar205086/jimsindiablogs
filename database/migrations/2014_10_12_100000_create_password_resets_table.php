@@ -17,7 +17,7 @@ class CreatePasswordResetsTable extends Migration
             $table->string('email', 100)->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
-            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            // \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
         });
     }
 
