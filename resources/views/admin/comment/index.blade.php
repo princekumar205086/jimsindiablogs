@@ -199,7 +199,7 @@
 											<td id="view-twitter"></td>
 										</tr>
 										<tr>
-											<td>Google Plus</td>
+											<td>Github</td>
 											<td id="view-google-plus"></td>
 										</tr>
 										<tr>

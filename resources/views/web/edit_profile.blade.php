@@ -142,12 +142,12 @@
 						</span>
 						@endif
 					</div>
-					<div class="form-group{{ $errors->has('google_plus') ? ' has-error' : '' }}">
-						<label>Google Plus</label>
-						<input id="google_plus" type="text" name="google_plus" class="form-control" value="{{ $user->google_plus }}" maxlength="250" placeholder="ex: https://plus.google.com">
-						@if ($errors->has('google_plus'))
+					<div class="form-group{{ $errors->has('github') ? ' has-error' : '' }}">
+						<label>Github</label>
+						<input id="github" type="text" name="github" class="form-control" value="{{ $user->github }}" maxlength="250" placeholder="github">
+						@if ($errors->has('github'))
 						<span class="help-block">
-							<strong>{{ $errors->first('google_plus') }}</strong>
+							<strong>{{ $errors->first('github') }}</strong>
 						</span>
 						@endif
 					</div>

@@ -230,8 +230,8 @@
 							</div>
 
 
-							<div class="form-group{{ $errors->has('google_plus') ? ' has-error' : '' }}">
-								<label for="google_plus" class="col-sm-2 control-label">Google Plus URL</label>
+							<div class="form-group{{ $errors->has('github') ? ' has-error' : '' }}">
+								<label for="github" class="col-sm-2 control-label">Github</label>
 								<div class="col-sm-10">
 									<input type="text" name="google_plus" class="form-control" id="google_plus" value="{{ $user->google_plus }}" placeholder="ex. https://plus.google.com/username" required maxlength="250">
 									@if ($errors->has('google_plus'))

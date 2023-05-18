@@ -321,8 +321,8 @@
 											<td id="view-twitter"></td>
 										</tr>
 										<tr>
-											<td>Google Plus</td>
-											<td id="view-google-plus"></td>
+											<td>Github</td>
+											<td id="github"></td>
 										</tr>
 										<tr>
 											<td>Linkedin</td>
