@@ -200,7 +200,7 @@
 										</tr>
 										<tr>
 											<td>Github</td>
-											<td id="view-google-plus"></td>
+											<td id="view-github"></td>
 										</tr>
 										<tr>
 											<td>Linkedin</td>
@@ -432,7 +432,7 @@
 					$('#view-address').text(data['address']);
 					$('#view-facebook').text(data['facebook']);
 					$('#view-twitter').text(data['twitter']);
-					$('#view-google-plus').text(data['google_plus']);
+					$('#view-github').text(data['google_plus']);
 					$('#view-linkedin').text(data['linkedin']);
 					$('#view-about').text(data['about']);
 					if(data['role'] == 'admin'){

@@ -56,7 +56,7 @@
                         <li><a href="{{ $setting->twitter }}" target="_blank" title="{{ $setting->twitter }}"><i class="fa fa-twitter"></i></a></li>
                         @endif
                         @if(!empty($setting->google_plus))
-                        <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-github"></i></a></li>
                         @endif
                         @if(!empty($setting->linkedin))
                         <li><a href="{{ $setting->linkedin }}" target="_blank" title="{{ $setting->linkedin }}"><i class="fa fa-linkedin"></i></a></li>
@@ -138,7 +138,7 @@
                 <li><a href="{{ $setting->twitter }}" target="_blank" title="{{ $setting->twitter }}"><i class="fa fa-twitter"></i></a></li>
                 @endif
                 @if(!empty($setting->google_plus))
-                <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-github"></i></a></li>
                 @endif
                 @if(!empty($setting->linkedin))
                 <li><a href="{{ $setting->linkedin }}" target="_blank" title="{{ $setting->linkedin }}"><i class="fa fa-linkedin"></i></a></li>

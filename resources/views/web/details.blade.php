@@ -100,7 +100,7 @@ use Carbon\Carbon;
 						<li><a href="{{ $post->user->twitter }}" target="_blank" title="twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
 						@endif
 						@if($post->user->google_plus)
-						<li><a href="{{ $post->user->google_plus }}" target="_blank" title="google" class="google"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="{{ $post->user->google_plus }}" target="_blank" title="google" class="google"><i class="fa fa-github"></i></a></li>
 						@endif
 						@if($post->user->linkedin)
 						<li><a href="{{ $post->user->linkedin }}" target="_blank" title="linkedin" class="linkedin"><i class="fa fa-linkedin"></i></a></li>

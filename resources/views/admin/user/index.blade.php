@@ -117,7 +117,7 @@
 										<a href="{{ $user->twitter }}" target="_blank" class="fa fa-twitter social twitter"></a>
 										@endif
 										@if(!empty($user->google_plus))
-										<a href="{{ $user->google_plus }}" target="_blank" class="fa fa-google-plus social google"></a>
+										<a href="{{ $user->google_plus }}" target="_blank" class="fa fa-github social google"></a>
 										@endif
 										@if(!empty($user->linkedin))
 										<a href="{{ $user->linkedin }}" target="_blank" class="fa fa-linkedin social linkedin"></a>
@@ -405,7 +405,7 @@
 							$('#view-address').text(data['address']);
 							$('#view-facebook').text(data['facebook']);
 							$('#view-twitter').text(data['twitter']);
-							$('#view-google-plus').text(data['google_plus']);
+							$('#view-github').text(data['google_plus']);
 							$('#view-linkedin').text(data['linkedin']);
 							$('#view-about').text(data['about']);
 							if(data['role'] == 'admin'){
