@@ -79,8 +79,8 @@
 						@if(!empty($user->twitter))
 						<a href="{{ $user->twitter }}" target="_blank" class="fa fa-twitter social twitter"></a>
 						@endif
-						@if(!empty($user->google_plus))
-						<a href="{{ $user->google_plus }}" target="_blank" class="fa fa-github social google"></a>
+						@if(!empty($user->github))
+						<a href="{{ $user->github }}" target="_blank" class="fa fa-github social github"></a>
 						@endif
 						@if(!empty($user->linkedin))
 						<a href="{{ $user->linkedin }}" target="_blank" class="fa fa-linkedin social linkedin"></a>
@@ -233,10 +233,10 @@
 							<div class="form-group{{ $errors->has('github') ? ' has-error' : '' }}">
 								<label for="github" class="col-sm-2 control-label">Github</label>
 								<div class="col-sm-10">
-									<input type="text" name="google_plus" class="form-control" id="google_plus" value="{{ $user->google_plus }}" placeholder="ex. https://plus.google.com/username" required maxlength="250">
-									@if ($errors->has('google_plus'))
+									<input type="text" name="github" class="form-control" id="github" value="{{ $user->github }}" placeholder="ex. https://plus.github.com/username" required maxlength="250">
+									@if ($errors->has('github'))
 									<span class="help-block">
-										<strong>{{ $errors->first('google_plus') }}</strong>
+										<strong>{{ $errors->first('github') }}</strong>
 									</span>
 									@endif
 								</div>

@@ -71,8 +71,8 @@
 				@if(!empty($user->twitter))
 				<a href="{{ $user->twitter }}" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i></a>
 				@endif
-				@if(!empty($user->google_plus))
-				<a href="{{ $user->google_plus }}" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-github"></i></a>
+				@if(!empty($user->github))
+				<a href="{{ $user->github }}" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-github"></i></a>
 				@endif
 				@if(!empty($user->linkedin))
 				<a href="{{ $user->linkedin }}" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-linkedin"></i></a>

@@ -55,8 +55,8 @@
                         @if(!empty($setting->twitter))
                         <li><a href="{{ $setting->twitter }}" target="_blank" title="{{ $setting->twitter }}"><i class="fa fa-twitter"></i></a></li>
                         @endif
-                        @if(!empty($setting->google_plus))
-                        <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-github"></i></a></li>
+                        @if(!empty($setting->github))
+                        <li><a href="{{ $setting->github }}" target="_blank" title="{{ $setting->github }}"><i class="fa fa-github"></i></a></li>
                         @endif
                         @if(!empty($setting->linkedin))
                         <li><a href="{{ $setting->linkedin }}" target="_blank" title="{{ $setting->linkedin }}"><i class="fa fa-linkedin"></i></a></li>
@@ -137,8 +137,8 @@
                 @if(!empty($setting->twitter))
                 <li><a href="{{ $setting->twitter }}" target="_blank" title="{{ $setting->twitter }}"><i class="fa fa-twitter"></i></a></li>
                 @endif
-                @if(!empty($setting->google_plus))
-                <li><a href="{{ $setting->google_plus }}" target="_blank" title="{{ $setting->google_plus }}"><i class="fa fa-github"></i></a></li>
+                @if(!empty($setting->github))
+                <li><a href="{{ $setting->github }}" target="_blank" title="{{ $setting->github }}"><i class="fa fa-github"></i></a></li>
                 @endif
                 @if(!empty($setting->linkedin))
                 <li><a href="{{ $setting->linkedin }}" target="_blank" title="{{ $setting->linkedin }}"><i class="fa fa-linkedin"></i></a></li>

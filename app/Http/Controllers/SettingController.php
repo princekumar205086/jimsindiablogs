@@ -167,14 +167,14 @@ class SettingController extends Controller {
 		request()->validate([
 			'facebook' => 'nullable|string|max:250',
 			'twitter' => 'nullable|string|max:250',
-			'google_plus' => 'nullable|string|max:50',
+			'github' => 'nullable|string|max:50',
 			'linkedin' => 'nullable|string|max:50',
 		]);
 
 		$setting = Setting::find($id);
 		$setting->facebook = $request->input('facebook');
 		$setting->twitter = $request->input('twitter');
-		$setting->google_plus = $request->input('google_plus');
+		$setting->github = $request->input('github');
 		$setting->linkedin = $request->input('linkedin');
 		$affected_row = $setting->save();
 

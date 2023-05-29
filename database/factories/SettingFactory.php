@@ -22,7 +22,7 @@ $factory->define(App\Setting::class, function (Faker $faker) {
 		'map_iframe' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642905.2881059386!2d89.27605108245604!3d23.817470325158617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1520764767552" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>',
 		'facebook' => 'https://facebook.com/clustercoding',
 		'twitter' => 'https://twitter.com/cluster_coding',
-		'google_plus' => 'https://plus.google.com/+ClusterCoding',
+		'github' => 'https://github.com/+ClusterCoding',
 		'linkedin' => 'https://www.linkedin.com/company/clustercoding/',
 		'meta_title' => 'Cluster Coding Blog',
 		'meta_keywords' => 'ClusterCoding Blog, Cluster, Coding, Blog',

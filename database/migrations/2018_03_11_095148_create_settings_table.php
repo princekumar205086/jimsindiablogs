@@ -31,7 +31,7 @@ class CreateSettingsTable extends Migration {
 			$table->text('map_iframe')->nullable();
 			$table->string('facebook')->nullable();
 			$table->string('twitter')->nullable();
-			$table->string('google_plus')->nullable();
+			$table->string('github')->nullable();
 			$table->string('linkedin')->nullable();
 			$table->string('meta_title')->nullable();;
 			$table->string('meta_keywords')->nullable();

@@ -44,7 +44,7 @@ class ProfileController extends Controller {
 			'about' => 'required|string',
 			'facebook' => 'nullable|string|max:250',
 			'twitter' => 'nullable|string|max:250',
-			'google_plus' => 'nullable|string|max:250',
+			'github' => 'nullable|string|max:250',
 			'linkedin' => 'nullable|string|max:250',
 		]);
 
@@ -57,7 +57,7 @@ class ProfileController extends Controller {
 		$user->about = $request->input('about');
 		$user->facebook = $request->input('facebook');
 		$user->twitter = $request->input('twitter');
-		$user->google_plus = $request->input('google_plus');
+		$user->github = $request->input('github');
 		$user->linkedin = $request->input('linkedin');
 		$affected_row = $user->save();
 
