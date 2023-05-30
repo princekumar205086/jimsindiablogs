@@ -1951,7 +1951,7 @@ class ComposerStaticInit4a97023e7c1e863aa4a1b866bf1abeb3
         'Illuminate\\Queue\\WorkerOptions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/WorkerOptions.php',
         'Illuminate\\Redis\\Connections\\Connection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/Connection.php',
         'Illuminate\\Redis\\Connections\\PacksPhpRedisValues' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PacksPhpRedisValues.php',
-        'Illuminate\\Redis\\Connections\\PhpRedisClusterConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PhpRedisClusterConnection.php',
+        'Illuminate\\Redis\\Connections\\PhpRedisClusterConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PhpRedisWebdiggeronnection.php',
         'Illuminate\\Redis\\Connections\\PhpRedisConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PhpRedisConnection.php',
         'Illuminate\\Redis\\Connections\\PredisClusterConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PredisClusterConnection.php',
         'Illuminate\\Redis\\Connections\\PredisConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PredisConnection.php',

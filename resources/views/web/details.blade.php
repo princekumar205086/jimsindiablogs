@@ -244,7 +244,7 @@ use Carbon\Carbon;
 <script type="text/javascript" src="{{ asset('public/web/jssocials/jssocials.js') }}"></script>
 <script type="text/javascript">
 	$(function(){
-		var url = 'clustercoding.com';
+		var url = 'Webdigger.com';
 		$("#shareButtonLabel").jsSocials({
 			url: url,
 			text: "Google Search Page",

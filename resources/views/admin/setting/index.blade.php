@@ -126,7 +126,7 @@
 							<div class="form-group{{ $errors->has('copyright') ? ' has-error' : '' }}">
 								<label for="copyright" class="col-sm-2 control-label">Copyright</label>
 								<div class="col-sm-10">
-									<input type="text" name="copyright" class="form-control" id="copyright" value="{{ $setting->copyright }}" placeholder="ex. Copyright 2018 Clustercoding, All rights reserved." required maxlength="250">
+									<input type="text" name="copyright" class="form-control" id="copyright" value="{{ $setting->copyright }}" placeholder="ex. Copyright 2018 Webdigger, All rights reserved." required maxlength="250">
 									@if ($errors->has('copyright'))
 									<span class="help-block">
 										<strong>{{ $errors->first('copyright') }}</strong>
@@ -148,7 +148,7 @@
 							<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 								<label for="email" class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-10">
-									<input type="text" name="email" class="form-control" id="email" value="{{ $setting->email }}" placeholder="ex. clustercoding@gmail.com" required maxlength="100">
+									<input type="text" name="email" class="form-control" id="email" value="{{ $setting->email }}" placeholder="ex. Webdigger@gmail.com" required maxlength="100">
 									@if ($errors->has('email'))
 									<span class="help-block">
 										<strong>{{ $errors->first('email') }}</strong>
@@ -280,7 +280,7 @@
 							<div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
 								<label for="facebook" class="col-sm-2 control-label">Facebook</label>
 								<div class="col-sm-10">
-									<input type="text" name="facebook" class="form-control" id="facebook" value="{{ $setting->facebook }}" placeholder="ex. https://facebook.com/clustercoding" maxlength="250">
+									<input type="text" name="facebook" class="form-control" id="facebook" value="{{ $setting->facebook }}" placeholder="ex. https://facebook.com/Webdigger" maxlength="250">
 									@if ($errors->has('facebook'))
 									<span class="help-block">
 										<strong>{{ $errors->first('facebook') }}</strong>
@@ -313,7 +313,7 @@
 							<div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
 								<label for="linkedin" class="col-sm-2 control-label">Linkedin</label>
 								<div class="col-sm-10">
-									<input type="text" name="linkedin" class="form-control" id="linkedin" value="{{ $setting->linkedin }}" placeholder="ex. https://www.linkedin.com/company/clustercoding/" maxlength="250">
+									<input type="text" name="linkedin" class="form-control" id="linkedin" value="{{ $setting->linkedin }}" placeholder="ex. https://www.linkedin.com/company/Webdigger/" maxlength="250">
 									@if ($errors->has('linkedin'))
 									<span class="help-block">
 										<strong>{{ $errors->first('linkedin') }}</strong>
