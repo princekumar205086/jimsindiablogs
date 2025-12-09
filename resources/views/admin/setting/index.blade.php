@@ -47,7 +47,19 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('public/web/logo/' . $setting->logo) }}" width="262" class="img-responsive">
+									@php
+										$logoPath = $setting->logo ?? 'logo.png';
+										if (preg_match('#^(https?://)#', $logoPath)) {
+											$logoUrl = $logoPath;
+										} elseif (strpos($logoPath, 'public/') === 0 || strpos($logoPath, 'web/') === 0) {
+											$logoUrl = asset($logoPath);
+										} elseif (strpos($logoPath, '/') !== false) {
+											$logoUrl = asset('public/web/' . ltrim($logoPath, '/'));
+										} else {
+											$logoUrl = asset('public/web/images/' . $logoPath);
+										}
+									@endphp
+									<img src="{{ $logoUrl }}" width="262" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('logo') ? ' has-error' : '' }}">

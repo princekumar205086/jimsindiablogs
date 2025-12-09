@@ -73,9 +73,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="logo">
-                        <a aria-hidden="true" title="{{ $setting->website_title }}" href="{{ route('homePage') }}"><img alt="{{ $setting->website_title }}" src="{{ asset('public/web/logo/' . $setting->logo) }}"></a>
-                    </div>
+                        <div class="logo">
+                            @php
+                                $logoPath = $setting->logo ?? 'logo.png';
+                                // If logo contains protocol (http/https), use directly
+                                if (preg_match('#^(https?://)#', $logoPath)) {
+                                    $logoUrl = $logoPath;
+                                } elseif (strpos($logoPath, 'public/') === 0 || strpos($logoPath, 'web/') === 0) {
+                                    // If the stored value is already a path relative to public, use asset directly
+                                    $logoUrl = asset($logoPath);
+                                } elseif (strpos($logoPath, '/') !== false) {
+                                    // If value includes a directory (for example: images/logo.png), prefix public/web/
+                                    $logoUrl = asset('public/web/' . ltrim($logoPath, '/'));
+                                } else {
+                                    // Otherwise assume just a filename stored; use /public/web/images/ folder
+                                    $logoUrl = asset('public/web/images/' . $logoPath);
+                                }
+                            @endphp
+                            <a aria-hidden="true" title="{{ $setting->website_title }}" href="{{ route('homePage') }}"><img alt="{{ $setting->website_title }}" src="{{ $logoUrl }}"></a>
+                        </div>
                 </div>
                 <div class="col-sm-9">
                     <!-- <div class="ad"><a href="#" title="Maro News"><img  alt="maro-news" src="{{ asset('public/web') }}/images/uploads/ad.jpg"></a></div> -->
@@ -96,7 +112,7 @@
 <div class="responsive-header">
     <div class="res-logo-area">
         <div class="col-sm-9 col-xs-8">
-            <a href="{{ route('homePage') }}" title="Maro News"><img src="{{ asset('public/web/images/logo.png') }}" alt="{{ $setting->website_title }}"></a>
+            <a href="{{ route('homePage') }}" title="Maro News"><img src="{{ $logoUrl }}" alt="{{ $setting->website_title }}"></a>
         </div>
         <div class="col-sm-3 col-xs-4">
             <div id="nav-icons-head">
@@ -108,7 +124,7 @@
         </div>
     </div>
     <div class="responsive-menu">
-        <a href="{{ route('homePage') }}" title="{{ $setting->website_title }}"><img src="{{ asset('public/web/images/logo.png') }}" alt="maro-news"></a>
+        <a href="{{ route('homePage') }}" title="{{ $setting->website_title }}"><img src="{{ $logoUrl }}" alt="maro-news"></a>
         <ul>
             <li><a href="{{ route('homePage') }}" title="{{ $setting->website_title }}">Home</a></li>
             <li><a href="{{ route('mostPopularPage') }}" title="Most Popular">Most Popular</a></li>
