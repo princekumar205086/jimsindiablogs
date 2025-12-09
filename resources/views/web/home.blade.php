@@ -1,8 +1,8 @@
 @extends('web.layouts.app')
 
-@section('title', $setting->meta_title)
-@section('keywords', $setting->meta_keywords)
-@section('description', $setting->meta_description)
+@section('title', $setting->meta_title ?? '')
+@section('keywords', $setting->meta_keywords ?? '')
+@section('description', $setting->meta_description ?? '')
 
 @section('style')
 @endsection

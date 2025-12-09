@@ -18,17 +18,34 @@ class AppServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		//View::share('setting', 'query');
+		// Ensure a default $setting is available in all views to avoid null property errors
+		$setting = Setting::first();
+		if (!$setting) {
+			$setting = (object) [
+				'website_title' => config('app.name'),
+				'meta_title' => config('app.name'),
+				'meta_keywords' => '',
+				'meta_description' => '',
+				'copyright' => '',
+				'logo' => 'images/logo.png',
+				'favicon' => 'favicon.png',
+				'facebook' => '',
+				'twitter' => '',
+				'github' => '',
+				'linkedin' => '',
+			];
+		}
+		View::share('setting', $setting);
 
-		View::composer(['web.includes.sidebar'], function ($view) {
+		View::composer(['web.includes.sidebar'], function ($view) use ($setting) {
 			$categories = Category::where('publication_status', 1)->orderBy('category_name')->get(['id', 'category_name']);
 			$tags = Tag::where('publication_status', 1)->orderBy('tag_name')->get(['id', 'tag_name']);
-			$setting = Setting::first();
+			$setting = Setting::first() ?? $setting;
 			$view->with(compact('categories', 'tags', 'setting'));
 		});
 
-		View::composer(['web.includes.header', 'web.includes.footer'], function ($view) {
-			$setting = Setting::first();
+		View::composer(['web.includes.header', 'web.includes.footer'], function ($view) use ($setting) {
+			$setting = Setting::first() ?? $setting;
 			$pages = Page::where('publication_status', 1)->get(['page_name', 'page_slug']);
 			$view->with(compact('setting', 'pages'));
 		});
@@ -39,8 +56,8 @@ class AppServiceProvider extends ServiceProvider {
 			$view->with(compact('comments', 'posts'));
 		});
 
-		View::composer(['web.includes.head'], function ($view) {
-			$setting = Setting::first(['website_title']);
+		View::composer(['web.includes.head'], function ($view) use ($setting) {
+			$setting = Setting::first(['website_title']) ?? $setting;
 			$view->with(compact('setting'));
 		});
 	}

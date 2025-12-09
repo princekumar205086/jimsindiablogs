@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>@yield('title') - {{ $setting->website_title }}</title>
+<title>@yield('title') - {{ $setting->website_title ?? config('app.name') }}</title>
 <link rel="shortcut icon"  href="{{ asset('public/web/favicon/favicon.png') }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 <meta name="author" content="Prince" />
