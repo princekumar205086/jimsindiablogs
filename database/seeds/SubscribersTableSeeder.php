@@ -9,6 +9,6 @@ class SubscribersTableSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		factory(App\Subscriber::class, 100)->create();
+		\App\Subscriber::factory()->count(100)->create();
 	}
 }

@@ -1,12 +1,21 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Comment::class, function (Faker $faker) {
-	return [
-		'user_id' => $faker->numberBetween($min = 1, $max = 20),
-		'post_id' => $faker->numberBetween($min = 1, $max = 20),
-		'comment' => $faker->sentence,
-		'publication_status' => $faker->numberBetween($min = 0, $max = 1),
-	];
-});
+use App\Comment;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class CommentFactory extends Factory
+{
+    protected $model = Comment::class;
+
+    public function definition()
+    {
+        return [
+            'user_id' => $this->faker->numberBetween(1, 4),
+            'post_id' => $this->faker->numberBetween(1, 20),
+            'comment' => $this->faker->paragraph,
+            'publication_status' => $this->faker->numberBetween(0, 1),
+        ];
+    }
+}

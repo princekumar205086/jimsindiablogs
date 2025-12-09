@@ -1,34 +1,43 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Setting::class, function (Faker $faker) {
-	return [
-		'website_title' => 'Webdigger Blog',
-		'logo' => 'logo.png',
-		'favicon' => 'favicon.png',
-		'about_us' => 'Webdigger is among the pioneers in the Bangladesh to offer quality web services to medium and large sized businesses to compete in today’s digital world. We possess the experience and expertise to help web entrepreneurs reach their customers across the digital space.',
-		'copyright' => 'Copyright 2018 <a href="http://Webdigger.com" target="_blank">Webdigger</a>, All rights reserved.',
-		'email' => 'Webdigger@gmail.com',
-		'phone' => '+8801717888464',
-		'mobile' => '+8801761913331',
-		'fax' => '808080',
-		'address_line_one' => 'House# 83, Road# 16, Sector# 11',
-		'address_line_two' => 'Uttara',
-		'state' => 'Uttara',
-		'city' => 'Dhaka',
-		'zip' => '1230',
-		'country' => 'Bangladesh',
-		'map_iframe' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642905.2881059386!2d89.27605108245604!3d23.817470325158617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1520764767552" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>',
-		'facebook' => 'https://facebook.com/Webdigger',
-		'twitter' => 'https://twitter.com/cluster_coding',
-		'github' => 'https://github.com/+Webdigger',
-		'linkedin' => 'https://www.linkedin.com/company/Webdigger/',
-		'meta_title' => 'Webdigger Blog',
-		'meta_keywords' => 'Webdigger Blog, Cluster, Coding, Blog',
-		'meta_description' => 'Webdigger is among the pioneers in the Bangladesh to offer quality web services to medium and large sized businesses to compete in today’s digital world. We possess the experience and expertise to help web entrepreneurs reach their customers across the digital space.',
-		'gallery_meta_title' => 'Webdigger Blog',
-		'gallery_meta_keywords' => 'Webdigger Blog, Cluster, Coding, Blog',
-		'gallery_meta_description' => 'Webdigger is among the pioneers in the Bangladesh to offer quality web services to medium and large sized businesses to compete in today’s digital world. We possess the experience and expertise to help web entrepreneurs reach their customers across the digital space.',
-	];
-});
+use App\Setting;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class SettingFactory extends Factory
+{
+    protected $model = Setting::class;
+
+    public function definition()
+    {
+        return [
+            'website_title' => 'Jims India Blog',
+            'logo' => 'logo.png',
+            'favicon' => 'favicon.png',
+            'about_us' => 'Jims India Blog is a platform for sharing insights, stories and knowledge about education, business, technology and more. We strive to provide quality content that inspires and informs our readers.',
+            'copyright' => 'Copyright ' . date('Y') . ' <a href="http://jimsindia.com" target="_blank">Jims India</a>, All rights reserved.',
+            'email' => 'info@jimsindia.com',
+            'phone' => '+91 11 1234 5678',
+            'mobile' => '+91 9876 543 210',
+            'fax' => '011-12345678',
+            'address_line_one' => 'Sector 62, Institutional Area',
+            'address_line_two' => 'Noida',
+            'state' => 'Uttar Pradesh',
+            'city' => 'Noida',
+            'zip' => '201309',
+            'country' => 'India',
+            'map_iframe' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0!2d77.0!3d28.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDAyJzAwLjAiTiA3N8KwMDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>',
+            'facebook' => 'https://facebook.com/jimsindia',
+            'twitter' => 'https://twitter.com/jimsindia',
+            'github' => 'https://github.com/jimsindia',
+            'linkedin' => 'https://www.linkedin.com/company/jimsindia/',
+            'meta_title' => 'Jims India Blog - Education, Technology & Business Insights',
+            'meta_keywords' => 'Jims India, Blog, Education, Technology, Business, India',
+            'meta_description' => 'Jims India Blog provides quality content about education, technology, business and more. Stay updated with the latest trends and insights.',
+            'gallery_meta_title' => 'Jims India Photo Gallery',
+            'gallery_meta_keywords' => 'Jims India, Gallery, Photos, Campus, Events',
+            'gallery_meta_description' => 'Browse through our collection of photos showcasing campus life, events and activities at Jims India.',
+        ];
+    }
+}

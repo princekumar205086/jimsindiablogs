@@ -1,13 +1,21 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Gallery::class, function (Faker $faker) {
+use App\Gallery;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-	return [
-		'user_id' => 1,
-		'caption' => $faker->sentence,
-		'image' => '1.jpg',
-		'publication_status' => $faker->numberBetween($min = 0, $max = 1),
-	];
-});
+class GalleryFactory extends Factory
+{
+    protected $model = Gallery::class;
+
+    public function definition()
+    {
+        return [
+            'user_id' => 1,
+            'caption' => $this->faker->sentence,
+            'image' => '1.jpg',
+            'publication_status' => $this->faker->numberBetween(0, 1),
+        ];
+    }
+}

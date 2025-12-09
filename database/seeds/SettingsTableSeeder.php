@@ -9,6 +9,6 @@ class SettingsTableSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		factory(App\Setting::class, 1)->create();
+		\App\Setting::factory()->create();
 	}
 }

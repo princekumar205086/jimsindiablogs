@@ -1,21 +1,29 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Page::class, function (Faker $faker) {
+use App\Page;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-	$word = ucfirst($faker->word);
-	$page_slug = $faker->word . '_' . $faker->word;
-	$meta_keywords = $faker->word . ', ' . $faker->word . ', ' . $faker->word;
+class PageFactory extends Factory
+{
+    protected $model = Page::class;
 
-	return [
-		'user_id' => 1,
-		'page_name' => $word,
-		'page_slug' => $page_slug,
-		'page_content' => $faker->text(),
-		'publication_status' => $faker->numberBetween($min = 0, $max = 1),
-		'meta_title' => $word,
-		'meta_keywords' => $meta_keywords,
-		'meta_description' => $faker->text($maxNbChars = 150),
-	];
-});
+    public function definition()
+    {
+        $word = ucfirst($this->faker->word);
+        $page_slug = $this->faker->word . '_' . $this->faker->word;
+        $meta_keywords = $this->faker->word . ', ' . $this->faker->word . ', ' . $this->faker->word;
+
+        return [
+            'user_id' => 1,
+            'page_name' => $word,
+            'page_slug' => $page_slug,
+            'page_content' => $this->faker->paragraphs(3, true),
+            'publication_status' => $this->faker->numberBetween(0, 1),
+            'meta_title' => $word,
+            'meta_keywords' => $meta_keywords,
+            'meta_description' => $this->faker->text(150),
+        ];
+    }
+}
