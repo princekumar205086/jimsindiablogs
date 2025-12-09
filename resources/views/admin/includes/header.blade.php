@@ -26,7 +26,7 @@
       <!-- frontend -->
       <li class="user user-menu">
         <a href="{{ route('homePage') }}" target="_blank">
-          <img src="{{ asset('public/admin/image/frontend.png') }}" class="user-image img-responsive" alt="Frontend" width="25px">
+          <img src="{{ asset('admin/image/frontend.png') }}" class="user-image img-responsive" alt="Frontend" width="25px">
           <span class="hidden-xs">Frontend</span>
         </a>
       </li>
@@ -36,9 +36,9 @@
       <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           @if(!empty(Auth::user()->avatar))
-          <img src="{{ asset('public/avatar/' . Auth::user()->avatar) }}" class="user-image" alt="{{ Auth::user()->name }}">
+          <img src="{{ asset('avatar/' . Auth::user()->avatar) }}" class="user-image" alt="{{ Auth::user()->name }}">
           @else
-          <img src="{{ asset('public/avatar/user.png') }}" class="user-image" alt="{{ Auth::user()->name }}">
+          <img src="{{ asset('avatar/user.png') }}" class="user-image" alt="{{ Auth::user()->name }}">
           @endif
           <span class="hidden-xs">{{ Auth::user()->name }}</span>
         </a>
@@ -46,9 +46,9 @@
           <!-- User image -->
           <li class="user-header">
             @if(!empty(Auth::user()->avatar))
-            <img src="{{ asset('public/avatar/'. Auth::user()->avatar) }}" class="img-circle" alt="{{ Auth::user()->name }}">
+            <img src="{{ asset('avatar/'. Auth::user()->avatar) }}" class="img-circle" alt="{{ Auth::user()->name }}">
             @else
-            <img src="{{ asset('public/avatar/user.png') }}" class="img-circle" alt="{{ Auth::user()->name }}">
+            <img src="{{ asset('avatar/user.png') }}" class="img-circle" alt="{{ Auth::user()->name }}">
             @endif
             <p>
               {{ Auth::user()->name }} - {{ Auth::user()->role }}

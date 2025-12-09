@@ -3,7 +3,7 @@
 
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/parsley.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/parsley.css') }}">
 <style type="text/css">
 .tab-pane{
 	margin-top: 30px
@@ -54,9 +54,9 @@
 										} elseif (strpos($logoPath, 'public/') === 0 || strpos($logoPath, 'web/') === 0) {
 											$logoUrl = asset($logoPath);
 										} elseif (strpos($logoPath, '/') !== false) {
-											$logoUrl = asset('public/web/' . ltrim($logoPath, '/'));
+											$logoUrl = asset('web/' . ltrim($logoPath, '/'));
 										} else {
-											$logoUrl = asset('public/web/images/' . $logoPath);
+											$logoUrl = asset('web/images/' . $logoPath);
 										}
 									@endphp
 									<img src="{{ $logoUrl }}" width="262" class="img-responsive">
@@ -87,7 +87,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('public/web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
+									<img src="{{ asset('web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('favicon') ? ' has-error' : '' }}">
@@ -446,5 +446,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/js/parsley.min.js') }}"></script>
 @endsection

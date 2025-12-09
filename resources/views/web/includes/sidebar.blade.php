@@ -40,7 +40,7 @@
         </h4>
     </div>
     <div class="subscribe-image">
-        <img src="{{ asset('public/web') }}/images/newsletter.png" alt="Newsletter">
+        <img src="{{ asset('web') }}/images/newsletter.png" alt="Newsletter">
         <p>Subscribe our newsletter to stay updated.</p>
     </div>
     <form data-parsley-validate id="subscribe_add_form" method="post">

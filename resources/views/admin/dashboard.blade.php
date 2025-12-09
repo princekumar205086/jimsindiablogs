@@ -166,7 +166,7 @@
 						<div class="box-comment">
 							<!-- User image -->
 							@if(!empty($post->user->avatar))
-							<img class="img-circle img-sm" alt="{{ $post->user->name }}" src="{{ asset('public/avatar/' . $post->user->avatar) }}" width="35px">
+							<img class="img-circle img-sm" alt="{{ $post->user->name }}" src="{{ asset('avatar/' . $post->user->avatar) }}" width="35px">
 							@else
 							<img class="img-circle img-sm" alt="{{ $post->user->name }}" src="{{ get_gravatar($post->user->email) }}" width="35px">
 							@endif
@@ -204,7 +204,7 @@
 						<div class="box-comment">
 							<!-- User image -->
 							@if(!empty($comment->user->avatar))
-							<img class="img-circle img-sm" alt="{{ $comment->user->name }}" src="{{ asset('public/avatar/' . $comment->user->avatar) }}" width="35px">
+							<img class="img-circle img-sm" alt="{{ $comment->user->name }}" src="{{ asset('avatar/' . $comment->user->avatar) }}" width="35px">
 							@else
 							<img class="img-circle img-sm" alt="{{ $comment->user->name }}" src="{{ get_gravatar($comment->user->email) }}" width="35px">
 							@endif
@@ -242,7 +242,7 @@
 						@foreach($users as $user)
 						<li>
 							@if(!empty($user->avatar))
-							<img class="img-responsive" alt="{{ $user->name }}" src="{{ asset('public/avatar/' . $user->avatar) }}" width="128px">
+							<img class="img-responsive" alt="{{ $user->name }}" src="{{ asset('avatar/' . $user->avatar) }}" width="128px">
 							@else
 							<img class="img-responsive" alt="{{ $user->name }}" src="{{ get_gravatar($user->email) }}" width="128px">
 							@endif
@@ -446,8 +446,8 @@
 				method: "GET",
 				dataType: "json",
 				success:function(data){
-					var src = '{{ asset('public/avatar') }}/';
-					var default_avatar = '{{ asset('public/avatar/user.png') }}';
+					var src = '{{ asset('avatar') }}/';
+					var default_avatar = '{{ asset('avatar/user.png') }}';
 					$('#user-view-modal').modal('show');
 
 					$('#view-name').text(data['name']);
@@ -494,7 +494,7 @@
 				method: "GET",
 				dataType: "json",
 				success:function(data){
-					var src = '{{ asset('public/featured_image') }}/';
+					var src = '{{ asset('featured_image') }}/';
 					$('#view-post-modal').modal('show');
 					$('#view-post-title').text(data['post_title']);
 					$('#view-post-slug').text(data['post_slug']);

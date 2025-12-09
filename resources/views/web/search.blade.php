@@ -20,7 +20,7 @@
 		<div class="single-post-info" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding: 10px 0px;">
 			<div class="pull-left post-author">
 				@if(!empty($post->user->avatar))
-				<img alt="{{ $post->user->name }}" src="{{ asset('public/avatar/' . $post->user->avatar) }}" width="35px">
+				<img alt="{{ $post->user->name }}" src="{{ asset('avatar/' . $post->user->avatar) }}" width="35px">
 				@else
 				<img alt="{{ $post->user->name }}" src="{{ get_gravatar($post->user->email) }}" width="35px">
 				@endif

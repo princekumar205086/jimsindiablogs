@@ -15,6 +15,21 @@ return [
     |
     */
 
-    'driver' => 'gd'
+    'driver' => 'gd',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Configuration Options
+    |--------------------------------------------------------------------------
+    |
+    | These options control the behavior of Intervention Image.
+    |
+    */
+
+    'options' => [
+        'autoOrientation' => true,
+        'decodeAnimation' => false,
+        'blendingColor' => 'ffffff',
+    ]
 
 ];

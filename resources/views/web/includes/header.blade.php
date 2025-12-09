@@ -84,17 +84,17 @@
                                     $logoUrl = asset($logoPath);
                                 } elseif (strpos($logoPath, '/') !== false) {
                                     // If value includes a directory (for example: images/logo.png), prefix public/web/
-                                    $logoUrl = asset('public/web/' . ltrim($logoPath, '/'));
+                                    $logoUrl = asset('web/' . ltrim($logoPath, '/'));
                                 } else {
                                     // Otherwise assume just a filename stored; use /public/web/images/ folder
-                                    $logoUrl = asset('public/web/images/' . $logoPath);
+                                    $logoUrl = asset('web/images/' . $logoPath);
                                 }
                             @endphp
                             <a aria-hidden="true" title="{{ $setting->website_title }}" href="{{ route('homePage') }}"><img alt="{{ $setting->website_title }}" src="{{ $logoUrl }}"></a>
                         </div>
                 </div>
                 <div class="col-sm-9">
-                    <!-- <div class="ad"><a href="#" title="Maro News"><img  alt="maro-news" src="{{ asset('public/web') }}/images/uploads/ad.jpg"></a></div> -->
+                    <!-- <div class="ad"><a href="#" title="Maro News"><img  alt="maro-news" src="{{ asset('web') }}/images/uploads/ad.jpg"></a></div> -->
                 </div>
             </div>
         </div>

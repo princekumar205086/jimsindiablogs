@@ -4,9 +4,9 @@
     <div class="user-panel">
       <div class="pull-left image">
         @if(!empty(Auth::user()->avatar))
-        <img src="{{ asset('public/avatar/' . Auth::user()->avatar) }}" class="img-circle" alt="{{ Auth::user()->name }}">
+        <img src="{{ asset('avatar/' . Auth::user()->avatar) }}" class="img-circle" alt="{{ Auth::user()->name }}">
         @else
-        <img src="{{ asset('public/avatar/user.png') }}" class="img-circle" alt="{{ Auth::user()->name }}">
+        <img src="{{ asset('avatar/user.png') }}" class="img-circle" alt="{{ Auth::user()->name }}">
         @endif
       </div>
       <div class="pull-left info">

@@ -4,7 +4,7 @@
 		<div class="widget">
 			<div class="media-body text-center">
 				@if(!empty($user->avatar))
-				<img src="{{ asset('public/avatar/' . $user->avatar) }}" class="media-object img-circle" style="width:80px; margin: 0 auto; padding-bottom: 10px;">
+				<img src="{{ asset('avatar/' . $user->avatar) }}" class="media-object img-circle" style="width:80px; margin: 0 auto; padding-bottom: 10px;">
 				@else 
 				<img src="{{ get_gravatar($user->email) }}" class="media-object img-circle" style="width:80px; margin: 0 auto; padding-bottom: 10px;">
 				@endif

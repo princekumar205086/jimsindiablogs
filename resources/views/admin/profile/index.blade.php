@@ -2,7 +2,7 @@
 @section('title', 'Setting')
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/parsley.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/parsley.css') }}">
 <style>
 .social {
 	padding: 5px;
@@ -64,9 +64,9 @@
 			<div class="box box-primary">
 				<div class="box-body box-profile">
 					@if(!empty($user->avatar))
-					<img class="profile-user-img img-responsive img-circle" src="{{ asset('public/avatar/' . $user->avatar) }}" alt="{{ Auth::user()->name }}">
+					<img class="profile-user-img img-responsive img-circle" src="{{ asset('avatar/' . $user->avatar) }}" alt="{{ Auth::user()->name }}">
 					@else
-					<img class="profile-user-img img-responsive img-circle" src="{{ asset('public/avatar/user.png') }}" alt="{{ Auth::user()->name }}">
+					<img class="profile-user-img img-responsive img-circle" src="{{ asset('avatar/user.png') }}" alt="{{ Auth::user()->name }}">
 					@endif
 					<h3 class="profile-username text-center">{{ $user->name }}</h3>
 
@@ -370,7 +370,7 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/js/parsley.min.js') }}"></script>
 <script type="text/javascript">
 	@if(!empty($user->gender))
 	document.forms['profile_edit_form'].elements['gender'].value = "{{ $user->gender }}";

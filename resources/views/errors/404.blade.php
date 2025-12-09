@@ -5,7 +5,7 @@
 <div class="col-md-12">
     <div class="error-404">
         <a href="{{ route('homePage') }}">
-            <img src="{{ asset('public/web/images/404.png') }}">
+            <img src="{{ asset('web/images/404.png') }}">
         </a>
     </div>
 </div>

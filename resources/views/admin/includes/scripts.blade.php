@@ -1,19 +1,19 @@
 <!-- jQuery 3 -->
-<script src="{{ asset('public/admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('public/admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- SlimScroll -->
-<script src="{{ asset('public/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ asset('admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
-<script src="{{ asset('public/admin/bower_components/fastclick/lib/fastclick.js') }}"></script>
+<script src="{{ asset('admin/bower_components/fastclick/lib/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('public/admin/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('public/admin/dist/js/demo.js') }}"></script>
+<script src="{{ asset('admin/dist/js/demo.js') }}"></script>
 <!-- Parsley form validation -->
-<script src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
+<script src="{{ asset('admin/js/parsley.min.js') }}"></script>
 <!-- Summernote editor -->
-<script src="{{ asset('public/admin/summernote/summernote.js') }}"></script>
+<script src="{{ asset('admin/summernote/summernote.js') }}"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree();

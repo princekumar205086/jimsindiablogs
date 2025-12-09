@@ -10,8 +10,8 @@ use Carbon\Carbon;
 
 @section('style')
 <!-- Social Share: http://js-socials.com/demos/ -->
-<link rel="stylesheet" type="text/css" href="{{ asset('public/web/jssocials/jssocials.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('public/web/jssocials/jssocials-theme-flat.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('web/jssocials/jssocials.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('web/jssocials/jssocials-theme-flat.css') }}">
 <style type="text/css">
 	iframe {
 		margin: 20px 0px;
@@ -40,7 +40,7 @@ use Carbon\Carbon;
 			<div class="single-post-info">
 				<div class="pull-left post-author">
 					@if(!empty($post->user->avatar))
-					<img alt="{{ $post->user->name }}" src="{{ asset('public/avatar/' . $post->user->avatar) }}" width="35px">
+					<img alt="{{ $post->user->name }}" src="{{ asset('avatar/' . $post->user->avatar) }}" width="35px">
 					@else
 					<img alt="{{ $post->user->name }}" src="{{ get_gravatar($post->user->email) }}" width="35px">
 					@endif
@@ -84,7 +84,7 @@ use Carbon\Carbon;
 			<div class="author">
 				<div class="author-avatar">
 					@if(!empty($post->user->avatar))
-					<img alt="{{ $post->user->name }}" src="{{ asset('public/avatar/' . $post->user->avatar) }}" width="90px">
+					<img alt="{{ $post->user->name }}" src="{{ asset('avatar/' . $post->user->avatar) }}" width="90px">
 					@else
 					<img alt="{{ $post->user->name }}" src="{{ get_gravatar($post->user->email) }}" width="90px">
 					@endif
@@ -142,7 +142,7 @@ use Carbon\Carbon;
 			<li>
 				<div class="comment">
 					@if(!empty($comment->user->avatar))
-					<img alt="{{ $comment->user->name }}" src="{{ asset('public/avatar/' . $comment->user->avatar) }}" width="70px">
+					<img alt="{{ $comment->user->name }}" src="{{ asset('avatar/' . $comment->user->avatar) }}" width="70px">
 					@else
 					<img alt="{{ $comment->user->name }}" src="{{ get_gravatar($comment->user->email) }}" width="70px">
 					@endif
@@ -160,7 +160,7 @@ use Carbon\Carbon;
 					<li>
 						<div class="comment">
 							@if(!empty($sub_comment->user->avatar))
-							<img alt="{{ $sub_comment->user->name }}" src="{{ asset('public/avatar/' . $sub_comment->user->avatar) }}" width="70px">
+							<img alt="{{ $sub_comment->user->name }}" src="{{ asset('avatar/' . $sub_comment->user->avatar) }}" width="70px">
 							@else
 							<img alt="{{ $sub_comment->user->name }}" src="{{ get_gravatar($sub_comment->user->email) }}" width="70px">
 							@endif
@@ -241,7 +241,7 @@ use Carbon\Carbon;
 	});
 </script>
 <!-- Social Share: http://js-socials.com/demos/ -->
-<script type="text/javascript" src="{{ asset('public/web/jssocials/jssocials.js') }}"></script>
+<script type="text/javascript" src="{{ asset('web/jssocials/jssocials.js') }}"></script>
 <script type="text/javascript">
 	$(function(){
 		var url = 'Webdigger.com';

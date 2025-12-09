@@ -165,7 +165,6 @@ return [
 		Illuminate\View\ViewServiceProvider::class,
 		Yajra\DataTables\DataTablesServiceProvider::class,
 		Mews\Purifier\PurifierServiceProvider::class,
-		Intervention\Image\ImageServiceProvider::class,
 
 		/*
 			         * Package Service Providers...
@@ -230,7 +229,7 @@ return [
 		'View' => Illuminate\Support\Facades\View::class,
 		'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 		'Purifier' => Mews\Purifier\Facades\Purifier::class,
-		'Image' => Intervention\Image\Facades\Image::class,
+		'Image' => Intervention\Image\Laravel\Facades\Image::class,
 
 	],
 
