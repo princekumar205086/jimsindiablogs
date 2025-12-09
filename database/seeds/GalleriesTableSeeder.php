@@ -9,6 +9,6 @@ class GalleriesTableSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		factory(App\Gallery::class, 15)->create();
+		\App\Gallery::factory()->count(15)->create();
 	}
 }

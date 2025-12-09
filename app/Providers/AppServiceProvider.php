@@ -18,8 +18,19 @@ class AppServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
+		// Skip if running migrations to avoid querying non-existent tables
+		if (app()->runningInConsole() && !app()->runningUnitTests()) {
+			if (request()->server('argv')[1] ?? null === 'migrate:fresh') {
+				return;
+			}
+		}
+
 		// Ensure a default $setting is available in all views to avoid null property errors
-		$setting = Setting::first();
+		try {
+			$setting = Setting::first();
+		} catch (\Exception $e) {
+			$setting = null;
+		}
 		if (!$setting) {
 			$setting = (object) [
 				'website_title' => config('app.name'),

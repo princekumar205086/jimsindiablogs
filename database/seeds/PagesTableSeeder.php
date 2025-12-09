@@ -9,6 +9,6 @@ class PagesTableSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		factory(App\Page::class, 5)->create();
+		\App\Page::factory()->count(5)->create();
 	}
 }
