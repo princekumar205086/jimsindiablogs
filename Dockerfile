@@ -4,6 +4,11 @@ WORKDIR /app
 
 # copy composer files first for caching
 COPY composer.json composer.lock /app/
+
+# copy directories needed for autoload classmap
+COPY database /app/database
+COPY app /app/app
+
 RUN composer install --no-dev --no-scripts --prefer-dist --no-interaction --no-progress --optimize-autoloader
 
 # copy rest of application (so vendor and app are in same workspace)
