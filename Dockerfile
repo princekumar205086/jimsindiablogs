@@ -29,7 +29,7 @@ RUN if [ -f package-lock.json ]; then npm ci --no-audit --prefer-offline; else n
 # copy app sources and run the frontend build
 COPY . /app
 # run your build command (adjust if you use yarn or Vite/Mix different command)
-RUN npm run build
+RUN npm run production
 
 # ---------- Final runtime image ----------
 FROM php:8.2-apache
