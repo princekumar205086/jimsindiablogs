@@ -85,5 +85,10 @@ EXPOSE 8080
 RUN sed -ri "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf \
  && sed -ri "s/:80>/:${PORT}>/" /etc/apache2/sites-enabled/000-default.conf
 
+# copy entrypoint script and make it executable
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 # final command
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
