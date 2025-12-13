@@ -57,12 +57,27 @@ RUN mkdir -p /app/storage /app/bootstrap/cache \
   && chown -R www-data:www-data /app/storage /app/bootstrap/cache \
   && chmod -R 775 /app/storage /app/bootstrap/cache
 
+# Set ownership of the entire app directory to www-data
+RUN chown -R www-data:www-data /app
+
 # handle .env / .env.example logic:
 # - if .env exists, create .env.example from it (cp .env .env.example)
 # - else, if .env.example exists, create .env from .env.example (cp .env.example .env)
 RUN if [ -f /app/.env ]; then cp /app/.env /app/.env.example; \
     elif [ -f /app/.env.example ]; then cp /app/.env.example /app/.env; \
     fi
+
+# Configure Apache DocumentRoot
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
+ && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+# Update Apache directory permissions
+RUN echo '<Directory /app/public>\n\
+    Options Indexes FollowSymLinks\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>' > /etc/apache2/conf-available/laravel.conf \
+ && a2enconf laravel
 
 # expose port expected by Cloud Run (and make apache listen on it)
 ENV PORT 8080
